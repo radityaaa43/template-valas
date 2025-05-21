@@ -36,7 +36,7 @@ module:
 ### How to Setup Project
 
 ```bash
-1. run command `cd briapi-template-valas-php` to change directory
+1. run command `cd template-valas` to change directory
 2. copy .env file by typing `cp .env.example .env` in the terminal
 3. fill the .env file with the required values
 4. run composer install to install all dependencies
@@ -83,8 +83,8 @@ module:
 2. fill variable $creditAccount, eg: '034401083104504'
 3. fill variable $debitCurrency, eg: 'USD'
 4. fill variable $creditCurrency, eg: 'IDR'
-5. fill variable $remark, eg: '374628374'
-6. fill variable $partnerReferenceNo , eg: '7278163827131'
+5. fill variable $remark, you can generate with (new GenerateRandomString())->generate(9)
+6. fill variable $partnerReferenceNo, you can generate with (string) (new VarNumber())->generateVar(13)
 7. fill variable $debitAmount, eg: '3.00'
 8. fill variable $partnerCode, eg: 'rxEG1EMYHQZMgb3'
 9. run command `php src/transaction_valas_non_nego.php serve`
